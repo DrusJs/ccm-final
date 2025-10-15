@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const videos = [
-    "",
+    "enter-to-digital-main.mp4",
     "elena_bio_age_compress.mp4",
     "pavel_radiolink_compress.mp4",
     "diana_cardio_integro_compress.mp4"
@@ -373,11 +373,13 @@ const playButtons = document.querySelectorAll('.play-button');
 if (playButtons.length > 0) {
     playButtons.forEach((button, index) => {
         button.addEventListener('click', function() {
-            const videoContainer = this.closest('.projects-item-video');
-            const imgElement = videoContainer.querySelector('.project-video');
+            const videoContainer = this.closest('.projects-item-video') || this.closest('.about-video-player');
+            const imgElement = videoContainer.querySelector('.project-video') || videoContainer.querySelector('.about-video');
             
             const videoSrc = videos[index];
             const videoPath = "video/"
+
+            console.log(videoContainer)
             
             if (videoSrc && imgElement) {
                 const videoElement = document.createElement('video');
