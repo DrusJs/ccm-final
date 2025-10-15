@@ -388,6 +388,7 @@ if (playButtons.length > 0) {
                 videoElement.controls = true;
                 videoElement.autoplay = true;
                 videoElement.style.width = '100%';
+                videoElement.style.maxWidth = '1350px';
                 videoElement.style.height = 'auto';
                 
                 imgElement.replaceWith(videoElement);
