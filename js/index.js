@@ -378,8 +378,6 @@ if (playButtons.length > 0) {
             
             const videoSrc = videos[index];
             const videoPath = "video/"
-
-            console.log(videoContainer)
             
             if (videoSrc && imgElement) {
                 const videoElement = document.createElement('video');
