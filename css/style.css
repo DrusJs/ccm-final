@@ -397,9 +397,17 @@ body {
 }
 
 .steps-tab-action {
-    display: flex;
+    /* display: flex; */
+    display: none;
     align-items: center;
     gap: 10px;
+}
+
+.steps-action-description {
+    /* display: flex; */
+    display: none;
+    flex-direction: column;
+    margin-top: 20px;
 }
 
 .steps-tab-button {
@@ -419,11 +427,7 @@ body {
     font-weight: 500;
 }
 
-.steps-action-description {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
+
 
 .steps-content {
     margin-top: 40px;
